@@ -159,6 +159,12 @@ In other words
     # If you are ready for kitchen tests
     rake kitchen:all
 
+## Short layout
+
+Instead of generating full noespec for project you can use short one:
+
+    noe prepare --template=chef-cookbook --layout=short my-cookbook
+
 ## Updating cookbook
 
 You can also easily update your cookbook from template by regenerating files.
@@ -175,6 +181,18 @@ You can also easily update your cookbook from template by regenerating files.
 ### Preferred way: safe-override
 
     noe go --safe-override # trust your template creator which files safe to override automatically
+
+**Pay attention**: by default the following files will be overrided with safe-override:
+
+* **spec/spec_helper.rb**
+* **.gitignore**
+* **.kitchen.docker.yml**
+* **.rubocop.yml**
+* **Gemfile**
+* **Rakefile**
+* **chefignore**
+
+They marked as *safe-override* because they are rarely requires modifying. You can change this behavior in your cookbook noespec.
 
 ## Noe
 

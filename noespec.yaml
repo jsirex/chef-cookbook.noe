@@ -90,7 +90,7 @@ template-info:
 
     .gitignore:
       description: Files to be ignored by git or another version control system
-      safe-override: false
+      safe-override: true
 
     .kitchen.docker.yml:
       description: Kitchen sample configuration for docker
@@ -110,7 +110,7 @@ template-info:
 
     Gemfile:
       description: Gemfile
-      safe-override: false
+      safe-override: true
 
     LICENSE:
       description: Licensing information
@@ -118,11 +118,11 @@ template-info:
 
     Rakefile:
       description: Rakefile
-      safe-override: false
+      safe-override: true
 
     chefignore:
       description: Files to be ignored by chef
-      safe-override: false
+      safe-override: true
 
     metadata.rb:
       description: Main information
