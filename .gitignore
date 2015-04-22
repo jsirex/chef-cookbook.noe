@@ -1,1 +1,3 @@
 .yardoc/
+src/Gemfile.lock
+src/Berksfile.lock
