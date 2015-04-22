@@ -133,6 +133,7 @@ Chef community has been started to develop something for Chef DK. But why to not
 In other words
 
     [sudo] gem install noe bundler
+    noe install
     git clone https://github.com/jsirex/chef-cookbook.noe.git ~/.noe/chef-cookbook
 
 ## Creating new cookbook
