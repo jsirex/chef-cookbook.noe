@@ -194,6 +194,15 @@ You can also easily update your cookbook from template by regenerating files.
 
 They marked as *safe-override* because they are rarely requires modifying. You can change this behavior in your cookbook noespec.
 
+### Regenerating noespec itself
+
+If template has big changes in specification (noespec file) you can easily regenerate spec:
+
+    # from cookbook directory
+    noe prepare --template=chef-cookbook --layout=short --force
+
+Backup/commit your file before applying this command and you can compare differences.
+
 ## Noe
 
 Read more about at [noe home page](http://revision-zero.org/noe)
