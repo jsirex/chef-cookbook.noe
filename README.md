@@ -13,9 +13,7 @@ Pay attention that is not depend and not use *ChefDK*.
 Generated cookbook ships with:
 
 * **attributes/default.rb**
-* **files/default/**
 * **recipes/default.rb**
-* **templates/default/**
 * **metadata.rb**
 * **LICENSE**
 
@@ -44,14 +42,14 @@ It also recognises **spec/support/** directory where you can store additional li
 
 Generated cookbook ships with:
 
-* **test/fixtures/cookbooks/** - folder where you can store you test-cookbooks
+* **test/fixtures/cookbooks/** - folder where test cookbook generated for you
 * **test/integration/default/serverspec/default_spec.rb** - sample serverspec spec test for your test-kitchen
 * **.kitchen.yml** - default settings using Vagrant with VirtualBox
 * **.kitchen.docker.yml** - additional sample configuration which can be copied to **.kitchen.local.yml**
 
 ### Using test-cookbooks
 
-Please note that you must add your test cookbook to **Berksfile** so kitchen will be able to load it:
+Please note that you must add your tests cookbook to **Berksfile** so kitchen will be able to load it. Test cookbook added by default:
 
     # Berksfile
     ....
