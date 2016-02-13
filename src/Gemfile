@@ -21,6 +21,7 @@ group :knife do
   gem 'knife-cookbook-doc'
   gem 'knife-supermarket'
   gem 'knife-spork'
+  gem 'knife-solo_data_bag', '~> 1.0'
 end
 
 # Kitchen

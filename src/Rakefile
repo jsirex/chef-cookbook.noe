@@ -24,9 +24,11 @@ end
 begin
   require 'foodcritic'
 
-  task default: [:foodcritic]
   FoodCritic::Rake::LintTask.new do |t|
-    t.options = { fail_tags: %w/correctness services libraries deprecated/ }
+    t.options = {
+      progress: true,
+      fail_tags: %w/correctness services libraries deprecated/
+    }
   end
 rescue LoadError
   warn 'Foodcritic Is missing ZOMG'
