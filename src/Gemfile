@@ -15,12 +15,13 @@ end
 
 group :development do
   gem 'rake'
+  gem 'stove'
 end
 
 group :knife do
   gem 'knife-cookbook-doc'
   gem 'knife-supermarket'
-  gem 'knife-spork'
+  gem 'knife-solo_data_bag', '~> 1.0'
   gem 'knife-solo_data_bag', '~> 1.0'
 end
 
