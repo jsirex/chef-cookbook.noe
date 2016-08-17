@@ -1,21 +1,8 @@
 ---
 driver:
   name: docker
+  provision_command: curl -L https://www.opscode.com/chef/install.sh | bash -s -- -v 12.12.15
 
 provisioner:
   name: chef_zero
-
-platforms:
-  - name: debian-7.9
-    driver_config:
-      require_chef_omnibus: false
-      provision_command:
-        - apt-get update; apt-get -y install build-essential wget net-tools
-        - curl -L https://www.opscode.com/chef/install.sh | bash
-
-  - name: centos-7
-    driver_config:
-      require_chef_omnibus: false
-      provision_command:
-        - yum install -y tar initscripts
-        - curl -L https://www.opscode.com/chef/install.sh | bash
+  required_chef_omnibus: false

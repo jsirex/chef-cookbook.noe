@@ -1,26 +1,27 @@
 ---
 driver:
   name: vagrant
+  ssh:
+    insert_key: false
   customize:
-    cpus: 2
+    cpus: 1
     memory: 1024
 
 provisioner:
   name: chef_zero
   chef_client_path: /usr/bin/chef-client
-  require_chef_omnibus: 12.6.0
+  require_chef_omnibus: 12.12.15
 
 transport:
   name: sftp
 
 platforms:
-  - name: debian-7.9
-    platform: debian
-    driver_config:
-      provision_command:
-        - apt-get -y install build-essential
-
-  - name: centos-7.0
+  - name: centos-6.7
+  - name: centos-7.2
+  - name: debian-7.10
+  - name: debian-8.4
+  - name: ubuntu-12.04
+  - name: ubuntu-14.04
 
 suites:
   - name: default

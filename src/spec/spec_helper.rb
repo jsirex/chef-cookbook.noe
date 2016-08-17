@@ -12,9 +12,13 @@ RSpec.configure do |config|
 
   # Specify the Chef log_level (default: :warn)
   # config.log_level = :info
+  Ohai::Config[:log_level] = :warn
 
   # Specify the path to a local JSON file with Ohai data (default: nil)
   # config.path = 'ohai.json'
+
+  config.order = :random
+  config.fail_fast = true
 end
 
 at_exit { ChefSpec::Coverage.report! }

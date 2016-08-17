@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'chef', '~> 12.0'
 
 group :lint do
-  gem 'foodcritic'
-  gem 'rubocop', '>= 0.24'
+  gem 'foodcritic', require: false
+  gem 'rubocop', '>= 0.24', require: false
 end
 
 group :unit do
@@ -16,6 +16,7 @@ end
 group :development do
   gem 'rake'
   gem 'stove'
+  gem 'pry'
 end
 
 group :knife do
@@ -30,4 +31,12 @@ group :kitchen do
   gem 'kitchen-docker'
   gem 'kitchen-vagrant'
   gem 'kitchen-sync'
+end
+
+group :guard do
+  gem 'guard', '>= 2.14'
+  gem 'guard-bundler', require: false
+  gem 'guard-rubocop', require: false
+  gem 'guard-foodcritic', github: 'jsirex/guard-foodcritic', require: false
+  gem 'guard-rspec', require: false
 end
