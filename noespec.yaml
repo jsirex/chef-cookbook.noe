@@ -112,6 +112,10 @@ template-info:
       description: Gemfile
       safe-override: true
 
+    Guardfile:
+      description: Guardfile
+      safe-override: false
+
     LICENSE:
       description: Licensing information
       safe-override: false
