@@ -1,8 +1,7 @@
 AllCops:
-  TargetRubyVersion: 2.1
+  TargetRubyVersion: 2.3
   DefaultFormatter: fuubar
   DisplayCopNames: true
-
 
 Encoding:
   Enabled: false

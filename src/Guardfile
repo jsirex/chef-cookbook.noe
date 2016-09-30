@@ -1,11 +1,16 @@
+# frozen_string_literal: true
 clearing :on
+
+# For Emacs
+ignore(/.*flycheck_/)
+ignore(/#.*#/)
 
 guard :bundler do
   watch('Gemfile')
 end
 
 group :main, halt_on_fail: true do
-  guard :rspec, cmd: 'rspec', results_file: '/tmp/spec.result' do
+  guard :rspec, cmd: 'bundle exec rspec', results_file: '/tmp/spec.result' do
     watch(%r{spec/.+_spec.rb})
     watch('spec/spec_helper.rb') { 'spec' }
     watch('libraries/matchers.rb') { 'spec' }

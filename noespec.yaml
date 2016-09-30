@@ -21,7 +21,7 @@ template-info:
 
   # Don't remove the name and version entries, which are ALWAYS required
   name: "!{template_name}"
-  version: 1.4.0
+  version: 1.5.0
 
   # The following entries are information about the template itself and can safely
   # be removed on your own project.
@@ -88,6 +88,14 @@ template-info:
       description: Integration Test for cookbook
       safe-override: false
 
+    test/integration/default/serverspec/spec_helper.rb:
+      description: Integration Test helper
+      safe-override: false
+
+    test/integration/default/serverspec/Gemfile:
+      description: Integration Test Gemfile
+      safe-override: false
+
     .gitignore:
       description: Files to be ignored by git or another version control system
       safe-override: true
@@ -103,6 +111,10 @@ template-info:
     .rubocop.yml:
       description: Rubocop settings
       safe-override: true
+
+    .ruby-version:
+      description: Ruby version for rvm
+      safe-override: false
 
     Berksfile:
       description: Berkshelf file

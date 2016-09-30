@@ -4,4 +4,5 @@ metadata
 
 group :integration do
   cookbook '!{name}-test', path: 'test/fixtures/cookbooks/!{name}-test'
+  cookbook '!{name}-spec', path: 'test/fixtures/cookbooks/!{name}-spec'
 end
