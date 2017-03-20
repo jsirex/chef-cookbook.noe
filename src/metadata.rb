@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 name             '!{name}'
 maintainer       '!{maintainer}'
 maintainer_email '!{maintainer_email}'
