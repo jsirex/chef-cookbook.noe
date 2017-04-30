@@ -1,5 +1,6 @@
 #!/usr/bin/env rake
 # frozen_string_literal: true
+
 require 'foodcritic'
 require 'rubocop/rake_task'
 require 'rspec/core/rake_task'
@@ -15,7 +16,7 @@ ENV['CI_REPORTS'] = cookbook_dir + '/reports'
 FoodCritic::Rake::LintTask.new do |t|
   t.options = {
     progress: true,
-    fail_tags: %w(any)
+    fail_tags: %w[any]
   }
 end
 

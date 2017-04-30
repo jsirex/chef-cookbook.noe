@@ -21,7 +21,7 @@ template-info:
 
   # Don't remove the name and version entries, which are ALWAYS required
   name: "!{template_name}"
-  version: 1.5.1
+  version: 1.6.0
 
   # The following entries are information about the template itself and can safely
   # be removed on your own project.
@@ -84,16 +84,8 @@ template-info:
       description: Metadata for test cookbook
       safe-override: false
 
-    test/integration/default/serverspec/default_spec.rb:
+    test/integration/default/default_spec.rb:
       description: Integration Test for cookbook
-      safe-override: false
-
-    test/integration/default/serverspec/spec_helper.rb:
-      description: Integration Test helper
-      safe-override: false
-
-    test/integration/default/serverspec/Gemfile:
-      description: Integration Test Gemfile
       safe-override: false
 
     .gitignore:
