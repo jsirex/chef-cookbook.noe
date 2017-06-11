@@ -1,3 +1,4 @@
+# -*- mode: yaml -*-
 #
 # This file provides a full specification for maintaining your chef cookbook using Noe.
 # It consists of two main sections: template-info and variables. The first one contains
@@ -106,6 +107,10 @@ template-info:
 
     .ruby-version:
       description: Ruby version for rvm
+      safe-override: false
+
+    .foodcritic:
+      description: Settings for the foodcritic
       safe-override: false
 
     Berksfile:
