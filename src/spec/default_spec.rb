@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe '!{name}::default' do
   cached(:chef_run) do
-    ChefSpec::SoloRunner.new(platform: 'debian', version: '8.7').converge(described_recipe)
+    ChefSpec::SoloRunner.new(platform: 'debian', version: '9.2').converge(described_recipe)
   end
 
   it 'runs' do

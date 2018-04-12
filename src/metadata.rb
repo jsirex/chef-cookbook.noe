@@ -10,12 +10,12 @@ version          '!{version}'
 issues_url       '!{issues_url}'
 source_url       '!{source_url}'
 
-# supports 'debian'
+supports 'debian'
 # supports 'centos'
 
 # depends 'cookbook', '>= 0.0.0'
 
-# chef_version '>= 12.12'
+chef_version !{ chef_version == 'latest' ? "'>= 14'" : "'~> #{chef_version}'" }
 
 # Provided recipes
 recipe '!{name}::default', '!{description}'

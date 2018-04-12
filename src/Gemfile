@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'chef', '~> 12.14'
+gem 'chef', !{ chef_version == 'latest' ? "'>= 14'" : "'~> #{chef_version}'" }
 
 group :lint do
   gem 'foodcritic'
@@ -17,7 +17,6 @@ end
 
 group :development do
   gem 'pry'
-  gem 'pry-byebug'
   gem 'rake'
   gem 'stove'
 end
@@ -29,7 +28,7 @@ end
 
 # Kitchen
 group :kitchen do
-  gem 'kitchen-docker'
+  gem 'kitchen-dokken'
   gem 'kitchen-inspec'
   gem 'kitchen-sync'
   gem 'kitchen-vagrant'
@@ -40,7 +39,6 @@ group :guard do
   gem 'guard'
   gem 'guard-bundler', require: false
   gem 'guard-foodcritic', require: false
-  gem 'guard-kitchen', require: false
   gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
 end

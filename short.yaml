@@ -1,9 +1,28 @@
 # -*- mode: yaml -*-
+#
+# This file provides a full specification for maintaining your chef cookbook using Noe.
+# It consists of two main sections: template-info and variables. The first one contains
+# meta-information about the skeleton itself while the second one provides information
+# about your chef cookbook.
+#
+# Please update the first part with care, as it immediately affects the way Noe will
+# manage the files of your own project. The second part may be updated more freely.
+#
+# Remember that your project may use a shorter version of this file as it will be
+# automatically completed with default options when invoking 'noe go'. In particular,
+# the first section (under template-info) is only required to contain the name and
+# version of the template to use.
+#
+# Use 'noe prepare --template=!{template_name} --layout=short' to generate a shorter
+# version of this file.
+#
+# See 'noe help prepare' and 'noe help show-spec' for more information.
+#
 template-info:
 
   # Don't remove the name and version entries, which are ALWAYS required
   name: "!{template_name}"
-  version: 1.6.0
+  version: 2.0.0
 
   # The following entries are information about the template itself and can safely
   # be removed on your own project.
@@ -15,42 +34,19 @@ template-info:
     - {name: Yauhen Artsiukhou, email: jsirex@gmail.com}
   links:
     source: https://github.com/jsirex/chef-cookbook.noe/tree/master
+    documentation: https://github.com/jsirex/chef-cookbook.noe/tree/master/README.md
 
-  manifest:
-    spec/spec_helper.rb:
-      description: ChefSpec helper
-      safe-override: true
 
-    .gitignore:
-      description: Files to be ignored by git or another version control system
-      safe-override: true
-
-    .rubocop.yml:
-      description: Rubocop settings
-      safe-override: true
-
-    Gemfile:
-      description: Gemfile
-      safe-override: true
-
-    Rakefile:
-      description: Rakefile
-      safe-override: true
-
-    chefignore:
-      description: Files to be ignored by chef
-      safe-override: true
 
 # The following entries are template-related variables. Update to match your
 # own configuration.
 variables:
-  # A lower case cookbook name
+  chef_version: latest
   name: my-cookbook
   maintainer: FirstName LastName
   maintainer_email: firstname_lastname@gmail.com
-  license: apache 2
+  license: Apache-2.0
   description: Write description here
-  long_description: Write long description here
   issues_url: https://issues/
   source_url: https://sources/
   version: 0.1.0
